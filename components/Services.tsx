@@ -66,7 +66,6 @@ const Services = () => {
             ]
         }
     ];;
-    console.log(features)
     return (
 
         <section id="services" className="w-full pt-20 pb-10">
@@ -93,7 +92,7 @@ export default Services;
 const FeatureCards = ({ features }: any) => {
 
     if (!Array.isArray(features)) {
-        console.error("Expected featuresArray to be an array but got:", typeof features);
+
         return null;
     }
 

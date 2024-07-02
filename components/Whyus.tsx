@@ -5,7 +5,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
-import { companies, testimonials } from "@/data";
+import { testimonials } from "@/data";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
 
 import { cn } from "@/lib/utils";
