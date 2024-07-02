@@ -88,7 +88,7 @@ export function SignupFormDemo() {
                             Our Location
                         </h4>
                         <p className="text-base text-body-color dark:text-dark-6">
-                            No 567, 16th Main, 3rd Stage <br />West of Chord road,Rajajinagar, <br />Bangalore-560010
+                            No 567, 16th Main, 3rd Stage West of Chord road,<br />Rajajinagar, <br />Bangalore-560010
                         </p>
                     </div>
                 </div>
