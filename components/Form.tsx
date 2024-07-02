@@ -46,7 +46,7 @@ export function SignupFormDemo() {
 
                     <LabelInputContainer className="mb-4">
                         <Label htmlFor="comment">Comments</Label>
-                        <TextArea t id="comment" placeholder="additional details" type="textarea" />
+                        <TextArea id="comment" placeholder="additional details" type="textarea" />
                     </LabelInputContainer>
 
 
