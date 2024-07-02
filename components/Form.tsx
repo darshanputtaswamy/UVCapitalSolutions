@@ -3,11 +3,6 @@ import React from "react";
 import { Label } from "@/components/ui/Label";
 import { Input, TextArea, DropDownSingleSelect } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import {
-    IconBrandGithub,
-    IconBrandGoogle,
-    IconBrandOnlyfans,
-} from "@tabler/icons-react";
 
 
 export function SignupFormDemo() {
@@ -73,7 +68,7 @@ export function SignupFormDemo() {
                     <div
                         className="bg-primary/5 text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded sm:h-[70px] sm:max-w-[70px]"
                     >
-                        <a href="https://maps.app.goo.gl/qsqxhM5NtEwLomgx8" target="_blank">
+                        <a href="https://www.google.com/maps?q=13.0136123,77.5761442&z=17&hl=en" target="_blank">
                             <svg
                                 width="32"
                                 height="32"
@@ -93,7 +88,7 @@ export function SignupFormDemo() {
                             Our Location
                         </h4>
                         <p className="text-base text-body-color dark:text-dark-6">
-                            5102, ICC 2, <br />G.D Ambekar Marg, Dadar East, <br />Mumbai-400014
+                            No 567, 16th Main, 3rd Stage <br />West of Chord road,Rajajinagar, <br />Bangalore-560010
                         </p>
                     </div>
                 </div>
@@ -101,7 +96,7 @@ export function SignupFormDemo() {
                     <div
                         className="bg-primary/5 text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded sm:h-[70px] sm:max-w-[70px]"
                     >
-                        <a href="tel:+917700982822">
+                        <a href="tel:+919880579963">
                             <svg
                                 width="32"
                                 height="32"
@@ -136,9 +131,9 @@ export function SignupFormDemo() {
                             Phone Number
                         </h4>
                         <p className="text-base text-body-color dark:text-dark-6">
-                            022 247784619
+                            9880579963
                             <br />
-                            +91 7700982822
+                            9740636999
                         </p>
                     </div>
                 </div>
@@ -164,9 +159,7 @@ export function SignupFormDemo() {
                             Email Address
                         </h4>
                         <p className="text-base text-body-color dark:text-dark-6">
-                            <a href="angelsarc4@gmail.com" target="_blank" >angelsarc4@gmail.com</a>
-                            <br />
-                            <a href="mailto:oshiyashine@gmail.com" target="_blank" >oshiyashine@gmail.com</a>
+                            <a href="yuvicapitalsolution@gmail.com" target="_blank" >yuvicapitalsolution@gmail.com</a>
                         </p>
                     </div>
                 </div>

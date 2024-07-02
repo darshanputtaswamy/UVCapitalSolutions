@@ -26,8 +26,8 @@ export const navItems = [
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[400px]",
       imgClassName: "",
       titleClassName: "justify-start",
-      img: "/grid.svg",
-      spareImg: "/india.svg",
+      img: "./grid.svg",
+      spareImg: "./india.svg",
     },
     {
       id: 1,
@@ -36,7 +36,7 @@ export const navItems = [
       className: "lg:col-span-2 md:col-span-3 md:row-span-4",
       imgClassName: "",
       titleClassName: "justify-start",
-      img: "/grid.svg",
+      img: "./grid.svg",
       spareImg: "",
     },
     {
@@ -45,7 +45,7 @@ export const navItems = [
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[400px]",
       imgClassName: "",
       titleClassName: "justify-center",
-      img: "/grid.svg",
+      img: "./grid.svg",
       spareImg: "",
     },
 
