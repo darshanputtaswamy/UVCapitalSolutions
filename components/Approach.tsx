@@ -108,7 +108,7 @@ const Card = ({
         //   add these two
         //   you can generate the color from here https://cssgradient.io/
 
-        backgroundImage: 'url("/grid.svg")',
+        backgroundImage: 'url("./grid.svg")',
       }}
     >
       {/* change to h-10 w-10 , add opacity-30  */}

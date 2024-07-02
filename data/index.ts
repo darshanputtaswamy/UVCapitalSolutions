@@ -15,8 +15,8 @@ export const navItems = [
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
       titleClassName: "justify-start",
-      img: "/grid.svg",
-      spareImg: "/b4.svg",
+      img: "./grid.svg",
+      spareImg: "./b4.svg",
     },
    
     {
@@ -58,7 +58,7 @@ export const navItems = [
       imgClassName: "",
       titleClassName: "justify-center md:justify-start lg:justify-center",
       img: "",
-      spareImg: "/grid.svg",
+      spareImg: "./grid.svg",
     },
     {
       id: 7,
@@ -68,7 +68,7 @@ export const navItems = [
       imgClassName: "",
       titleClassName: "justify-center md:justify-start lg:justify-center",
       img: "",
-      spareImg: "/grid.svg",
+      spareImg: "./grid.svg",
     },
     {
       id: 6,
@@ -81,41 +81,7 @@ export const navItems = [
       spareImg: "",
     },
   ];
-  
-  export const projects = [
-    {
-      id: 1,
-      title: "3D Solar System Planets to Explore",
-      des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-      img: "/p1.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-      link: "https://github.com/adrianhajdin?tab=repositories",
-    },
-    {
-      id: 2,
-      title: "Yoom - Video Conferencing App",
-      des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-      img: "/p2.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-      link: "https://github.com/adrianhajdin/zoom-clone",
-    },
-    {
-      id: 3,
-      title: "AI Image SaaS - Canva Application",
-      des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-      img: "/p3.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-      link: "https://github.com/adrianhajdin/ai_saas_app",
-    },
-    {
-      id: 4,
-      title: "Animated Apple Iphone 3D Website",
-      des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-      img: "/p4.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-      link: "https://github.com/adrianhajdin/iphone",
-    },
-  ];
+   
   
   export const testimonials = [
     {
@@ -143,40 +109,7 @@ export const navItems = [
       "name": "Riley Carter",
       "title": "Director of SynergyWave Technologies"
     }
-  ];
-  
-  export const companies = [
-    {
-      id: 1,
-      name: "cloudinary",
-      img: "/cloud.svg",
-      nameImg: "/cloudName.svg",
-    },
-    {
-      id: 2,
-      name: "appwrite",
-      img: "/app.svg",
-      nameImg: "/appName.svg",
-    },
-    {
-      id: 3,
-      name: "HOSTINGER",
-      img: "/host.svg",
-      nameImg: "/hostName.svg",
-    },
-    {
-      id: 4,
-      name: "stream",
-      img: "/s.svg",
-      nameImg: "/streamName.svg",
-    },
-    {
-      id: 5,
-      name: "docker.",
-      img: "/dock.svg",
-      nameImg: "/dockerName.svg",
-    },
-  ];
+  ]; 
   
   export const workExperience = [
     {
@@ -184,25 +117,25 @@ export const navItems = [
       title: "Mission",
       desc: "Our mission is to empower individuals and institutions to thrive by offering financial services that meet needs, exceed expectations, and enrich the lives of our clients, communities, colleagues, and society. We aim to boost national GDP by providing expert financial advice to those in debt.",
       className: "md:col-span-2",
-      thumbnail: "/goal-svgrepo-com.svg",
+      thumbnail: "./goal-svgrepo-com.svg",
     },
     {
       id: 2,
       title: "Vision",
       desc: "Our vision is to be the trusted financial partner for our society, driving growth and innovation with unwavering financial integrity and transparency.",
       className: "md:col-span-2", // change to md:col-span-2
-      thumbnail: "/exp2.svg",
+      thumbnail: "./exp2.svg",
     },{
       id: 3,
       title: "A Legacy in Motion",
-      desc: "For more than a decade, UV Capitals has fulfilled its mission by leveraging past wisdom while maintaining a strong focus on the future.",
+      desc: "For more than a decade, Yuvi Capitals has fulfilled its mission by leveraging past wisdom while maintaining a strong focus on the future.",
       className: "md:col-span-1", // change to md:col-span-2
       thumbnail: "",
     }
     ,{
       id: 4,
       title: "Collaborating with the nation",
-      desc: "UV Capitals blends a culturally diverse workforce with a national network of connections to the country's leading investment institutions and thought leaders.",
+      desc: "Yuvi Capitals blends a culturally diverse workforce with a national network of connections to the country's leading investment institutions and thought leaders.",
       className: "md:col-span-1", // change to md:col-span-2
       thumbnail: "",
     }
@@ -216,7 +149,7 @@ export const navItems = [
     ,{
       id: 6,
       title: "Governance",
-      desc: "UV Capitals upholds robust governance standards and RBI guidelines with well-defined roles and responsibilities, ensuring accountability and legal compliance in DRT and NCLT (NCLAT) matters.",
+      desc: "Yuvi Capitals upholds robust governance standards and RBI guidelines with well-defined roles and responsibilities, ensuring accountability and legal compliance in DRT and NCLT (NCLAT) matters.",
       className: "md:col-span-1", // change to md:col-span-2
       thumbnail: "",
     },

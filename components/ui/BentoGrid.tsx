@@ -54,7 +54,7 @@ export const BentoGridItem = ({
                     "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
                 // add this border radius to make it more rounded so that the moving border is more realistic
                 borderRadius: `calc(1.75rem* 0.96)`,
-                backgroundImage: "url('/grid.svg')"
+                backgroundImage: "url('./grid.svg')"
             }}
             // remove bg-white dark:bg-slate-900
             className="rounded-sm text-blac my-10 border border-b-0 border-slate-800 "

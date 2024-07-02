@@ -20,7 +20,7 @@ import {
 
 const items = [
   {
-    title: "Why UV Capital Solutions",
+    title: "Why Yuvi Capital Solutions",
     description: "",
     list: [
       "Extensive network of financial sponsors",
