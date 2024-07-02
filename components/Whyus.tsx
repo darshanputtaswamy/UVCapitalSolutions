@@ -8,8 +8,6 @@ import MagicButton from "./MagicButton";
 import { companies, testimonials } from "@/data";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
 
-import { HoverEffect } from "./ui/CardHoverEffect";
-
 import { cn } from "@/lib/utils";
 import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
 import {
