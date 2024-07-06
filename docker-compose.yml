@@ -1,0 +1,10 @@
+version: "3"
+services: 
+    yuvicapsol-website-app:
+        build: .
+        platform: linux/arm64
+        image: l0ny1ucif32/yuvicapsol-website:latest
+        ports:
+            - "3000:3000"
+networks: 
+    internal_net: 

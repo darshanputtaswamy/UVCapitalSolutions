@@ -1,53 +1,80 @@
 "use client";
-import React from "react";
+import React, { useRef,useState } from "react";
 import { Label } from "@/components/ui/Label";
 import { Input, TextArea, DropDownSingleSelect } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-
+import emailjs from '@emailjs/browser';
+import Lottie from "react-lottie";
+import animationData from "@/data/confetti.json";
+import MagicButton from "./MagicButton";
 
 export function SignupFormDemo() {
+    const [emailSent, setEmailSent] = useState(false);
+    const defaultOptions = {
+        loop: emailSent,
+        autoplay: emailSent,
+        animationData: animationData,
+        rendererSettings: {
+          preserveAspectRatio: "xMidYMid slice",
+        },
+      };
+
+    const form = useRef<HTMLFormElement>(null);
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log("Form submitted");
+        
+        const serviceID = 'default_service';
+        const templateID = 'template_mwfd5vk';
+
+        emailjs.sendForm(serviceID, templateID, form.current, {
+            publicKey:'qy3j_s3KJcIQKqUdW'
+        })
+        .then(() => {
+            setEmailSent(true);
+        }, (err) => {
+            console.log(JSON.stringify(err));
+        });
+
     };
     return (
         <div className="flex flex-col justify-around  sm:flex-row md-flex-row w-[80vw]">
 
-            <div className="max-w-md w-full  rounded-none md:rounded-2xl shadow-input bg-white dark:bg-black-100">
-                <form className="my-8" onSubmit={handleSubmit}>
+            <div  id="contact-form" className="max-w-md w-full  rounded-none md:rounded-2xl shadow-input bg-white dark:bg-black-100">
+                { !emailSent && <form ref={form} className="my-8" onSubmit={handleSubmit}>
                     <LabelInputContainer className="mb-4">
-                        <Label htmlFor="name">Name</Label>
-                        <Input id="Firstname" placeholder="Anil Kumar" type="text" />
+                        <Label htmlFor="client_name">Name</Label>
+                        <Input id="client_name" name="client_name" placeholder="Anil Kumar" type="text"  />
                     </LabelInputContainer>
                     <LabelInputContainer className="mb-4">
-                        <Label htmlFor="email">Email Address</Label>
-                        <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
-                    </LabelInputContainer>
-
-                    <LabelInputContainer className="mb-4">
-                        <Label htmlFor="phone">Phone or Mobile</Label>
-                        <Input id="phone" placeholder="+919900990099" type="phone" />
-                    </LabelInputContainer>
-                    <LabelInputContainer className="mb-4">
-                        <Label htmlFor="company-type">Type of Company</Label>
-                        <Input id="company-type" placeholder="MSME" type="text" />
+                        <Label htmlFor="client_email">Email Address</Label>
+                        <Input id="client_email" name="client_email" placeholder="projectmayhem@fc.com" type="email"   />
                     </LabelInputContainer>
 
                     <LabelInputContainer className="mb-4">
-                        <Label htmlFor="legal-status">Legal Status</Label>
-                        <Input id="legal-status" placeholder="none" type="text" />
+                        <Label htmlFor="client_phone">Phone or Mobile</Label>
+                        <Input id="client_phone"  name="client_phone" placeholder="+919900990099" type="phone"  />
+                    </LabelInputContainer>
+                    <LabelInputContainer className="mb-4">
+                        <Label htmlFor="client_company_type">Type of Company</Label>
+                        <Input id="client_company_type" name="client_company_type" placeholder="MSME" type="text"  />
                     </LabelInputContainer>
 
-
                     <LabelInputContainer className="mb-4">
-                        <Label htmlFor="comment">Comments</Label>
-                        <TextArea id="comment" placeholder="additional details" type="textarea" />
+                        <Label htmlFor="legal_status">Legal Status</Label>
+                        <Input id="legal_status"  name="legal_status" placeholder="none" type="text" />
                     </LabelInputContainer>
 
 
                     <LabelInputContainer className="mb-4">
-                        <Label htmlFor="legal-status">Service</Label>
-                        <DropDownSingleSelect id="Service" placeholder="- Select Service - " type="select" >
+                        <Label htmlFor="client_comments">Comments</Label>
+                        <TextArea id="client_comments" name="client_comments" placeholder="additional details" type="textarea"  />
+                    </LabelInputContainer>
+
+
+                    <LabelInputContainer className="mb-4">
+                        <Label htmlFor="client_service">Service</Label>
+                        <DropDownSingleSelect id="client_service" name="client_service"  placeholder="- Select Service - " type="select" >
                             <option value="Select a Service">Select a Service</option><option value="One Time Settlement (OTS)">One Time Settlement (OTS)</option><option value="Loan Restructure (ARC and Banks)">Loan Restructure (ARC and Banks)</option><option value="Assignment Takeover from Banks, NBFCs, and Other Financial Institutes">Assignment Takeover from Banks, NBFCs, and Other Financial Institutes</option><option value="Assistance in Dealing with ARCs and NCLT">Assistance in Dealing with ARCs and NCLT</option><option value="In-House Legal Assistance">In-House Legal Assistance</option><option value="Debt and Equity Funding through Foreign Direct Investment (FDI) and top funding companies">Debt and Equity Funding through Foreign Direct Investment (FDI) and top funding companies</option><option value="Providing Funds from Major Investors">Providing Funds from Major Investors</option><option value="Investors Lobby on Distressed Assets">Investors Lobby on Distressed Assets</option><option value="Provide assistance in Auctions">Provide assistance in Auctions</option><option value="Processing of Auction and Privatization">Processing of Auction and Privatization</option><option value="Assistance in Dealing with ARCs and NCLT">Assistance in Dealing with ARCs and NCLT</option><option value="Assignment Takeover from Banks, NBFCs, and Other Financial Institutes">Assignment Takeover from Banks, NBFCs, and Other Financial Institutes</option><option value="None">None of the above</option>
                         </DropDownSingleSelect>
                     </LabelInputContainer>
@@ -59,7 +86,27 @@ export function SignupFormDemo() {
                         <BottomGradient />
                     </button>
                 </form>
+                } 
 
+                {
+                    emailSent &&  <div className="mt-5 relative">
+                    {/* button border magic from tailwind css buttons  */}
+                    {/* add rounded-md h-8 md:h-8, remove rounded-full */}
+                    {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
+                    {/* add handleCopy() for the copy the text */}
+                    <div
+                      className={`absolute -bottom-5 right-0 block`}
+                    >
+                      <Lottie options={defaultOptions} height={200} width={400} />
+                    </div>
+      
+                    <MagicButton
+                      title={"Thanks for reaching out!!. Will we get back to you. "}
+                      otherClasses="!bg-[#161A31]"
+                    />
+                  </div>
+
+                }
             </div >
 
             <div className="flex flex-col  my-auto">
@@ -88,7 +135,7 @@ export function SignupFormDemo() {
                             Our Location
                         </h4>
                         <p className="text-base text-body-color dark:text-dark-6">
-                            No 567, 16th Main, 3rd Stage West of Chord road,<br />Rajajinagar, <br />Bangalore-560010
+                            No 298, 14th main road, Rajmahal vilas extension, <br />Bangalore-560080
                         </p>
                     </div>
                 </div>

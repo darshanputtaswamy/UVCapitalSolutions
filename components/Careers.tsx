@@ -9,7 +9,7 @@ const Careers = () => {
     <section className="w-full py-20" id="careers">
       <div className="">
         <h1 className="heading">
-          <span className="text-purple">Cereers</span>
+          <span className="text-purple">Careers</span>
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 py-5 justify-items-center">
