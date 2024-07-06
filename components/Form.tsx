@@ -207,7 +207,7 @@ export function SignupFormDemo() {
                             Email Address
                         </h4>
                         <p className="text-base text-body-color dark:text-dark-6">
-                            <a href="yuvicapitalsolution@gmail.com" target="_blank" >yuvicapitalsolution@gmail.com</a>
+                            <a href="admin@yuvicapitalsolution.com" target="_blank" >admin@yuvicapitalsolution.com</a>
                         </p>
                     </div>
                 </div>
